@@ -242,24 +242,21 @@ p{
 }
 
 @media (max-width: 768px) {
+
   /* Header */
-  .navbar {
-    flex-wrap: wrap;
-    height: auto;
-    gap: 6px 8px;
-    padding: 8px;
-  }
-  .nav-logo { width: 90px; height: 40px; }
+  .navbar { flex-wrap: wrap; height: auto; gap: 4px 6px; padding: 6px; }
+  .nav-logo { order: 1; flex: 0 0 auto; width: 80px; height: 40px; }
   .logo { margin-left: 0; }
-  .nav-address { flex: 1; }
-  .nav-signin, .nav-return { flex: 0 0 auto; }
-  .nav-cart { flex: 0 0 auto; }
-  .nav-search {
-    order: 10;
-    flex: 1 1 100%;
-    width: 100%;
-  }
+  .nav-signin { order: 2; margin-left: auto; flex: 0 0 auto; }
+  .nav-return { order: 3; flex: 0 0 auto; }
+  .nav-cart { order: 4; flex: 0 0 auto; font-size: 0.75rem; }
+  .nav-cart i { font-size: 22px; }
+  .nav-address { order: 5; flex: 1 1 100%; }
+  .add-first { margin-left: 0; }
+  .nav-search { order: 6; flex: 1 1 100%; width: 100%; }
   .search-input { min-width: 0; }
+  .nav-second { font-size: 0.75rem; }
+  span { font-size: 0.6rem; }
 
   /* Panel */
   .panel {
@@ -279,12 +276,20 @@ p{
   .panel-opps p { margin: 0; }
   .panel-deals { display: none; }
 
-  /* Hero */
+  /* Hero: image upar, message neeche */
   .hero-section {
-    height: 220px;
-    background-position: center;
+    background: none;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-section::before {
+    content: "";
+    height: 200px;
+    background: url(heroimage1.jpg) left center / cover no-repeat;
   }
   .hero-msg {
+    background-color: #f7f7f7;
     height: auto;
     width: 100%;
     padding: 8px 12px;
@@ -299,20 +304,16 @@ p{
     gap: 10px;
     padding: 10px;
   }
-  .box {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 10px 0;
-  }
+  .box { width: 100%; height: auto; margin: 0; padding: 10px 0; }
   .box-content h2 { font-size: 15px; }
-  .box-img { height: 180px; }
   .box-content p { font-size: 100%; }
+  .box-img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background-size: contain;
+    background-color: white;
+  }
 
   /* Footer */
-  .foot-panel2 {
-    height: auto;
-    flex-wrap: wrap;
-    padding: 10px;
-  }
+  .foot-panel2 { height: auto; flex-wrap: wrap; padding: 10px; }
 }
