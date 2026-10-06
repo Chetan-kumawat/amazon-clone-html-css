@@ -5,7 +5,7 @@ img { max-width: 100%; height: auto; }
 *{
     margin:0;
     font-family:arial;
-    border-sizing:border-box;
+    box-sizing:border-box;
 }
 
 
@@ -244,67 +244,75 @@ p{
 @media (max-width: 768px) {
   /* Header */
   .navbar {
-    display: flex;
     flex-wrap: wrap;
-    height: auto !important;
+    height: auto;
+    gap: 6px 8px;
     padding: 8px;
   }
+  .nav-logo { width: 90px; height: 40px; }
+  .logo { margin-left: 0; }
+  .nav-address { flex: 1; }
+  .nav-signin, .nav-return { flex: 0 0 auto; }
+  .nav-cart { flex: 0 0 auto; }
   .nav-search {
-    order: 5;
+    order: 10;
     flex: 1 1 100%;
-    width: 100% !important;
+    width: 100%;
   }
-  .nav-signin, .nav-return, .nav-cart, .nav-address {
-    position: static !important;
-  }
+  .search-input { min-width: 0; }
 
   /* Panel */
   .panel {
-    height: auto !important;
+    height: auto;
     flex-wrap: wrap;
-    padding: 6px;
+    justify-content: flex-start;
+    gap: 6px 10px;
+    padding: 6px 10px;
   }
   .panel-opps {
+    width: auto;
+    display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 4px 12px;
     font-size: 13px;
   }
-  .panel-deals {
-    display: none; /* chhoti screen pe jagah nahi */
-  }
+  .panel-opps p { margin: 0; }
+  .panel-deals { display: none; }
 
   /* Hero */
   .hero-section {
-    height: auto !important;
-    min-height: 120px;
-    background-size: cover;
+    height: 220px;
     background-position: center;
   }
   .hero-msg {
-    position: static !important;
-    width: 100% !important;
+    height: auto;
+    width: 100%;
+    padding: 8px 12px;
     font-size: 13px;
+    text-align: center;
   }
 
-  /* Cards: 2-2 */
+  /* Cards: 2 column */
   .shop-section {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 10px;
   }
   .box {
-    width: 100% !important;
-    height: auto !important;
-    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px 0;
   }
-  .box-content h2 {
-    font-size: 15px;
-  }
-  .box-img {
-    width: 100% !important;
-    height: 180px !important;
-    background-size: cover;
-    background-position: center;
+  .box-content h2 { font-size: 15px; }
+  .box-img { height: 180px; }
+  .box-content p { font-size: 100%; }
+
+  /* Footer */
+  .foot-panel2 {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
   }
 }
