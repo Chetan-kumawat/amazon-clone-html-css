@@ -17,7 +17,7 @@ img { max-width: 100%; height: auto; }
   /* Cards ek ke neeche ek ya 2-2 */
   .box-container, .cards, .shop-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
