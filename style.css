@@ -275,3 +275,18 @@ p{
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .box-container,
+    .cards,
+    .shop-section {
+        grid-template-columns: 1fr;
+    }
+
+    .box-container img,
+    .cards img,
+    .shop-section img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
